@@ -12,3 +12,6 @@
 .btn-primary-save:hover{
     background-color: #dd7d08
 }
+.btn-save-container{
+    width: 20%;
+}

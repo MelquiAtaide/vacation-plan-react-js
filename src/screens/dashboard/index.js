@@ -3,15 +3,22 @@ import './dashboard.css';
 import photo from '../../assets/imgs/user_2.png';
 import logo from '../../assets/imgs/logo.png';
 import TableContent from "../../components/table/inde";
-import BtnPrimarySave from "../../components/button/btnPrimarySave";
+import BtnModalCreate from "../../components/button/btnModalCreate";
+import { Form } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Dashboard() {
     return (
         <div className="container-dashboard">
             <header>
                 <div className="title-app">
-                    <img src={logo} alt="logo-photo" className="logo-photo"/>
-                    <h1>Vacation Plan</h1>
+                    <div className="logo-container">
+                        <img src={logo} alt="logo-photo" className="logo-photo"/>
+                        <h1>Vacation Plan</h1>
+                    </div>
+                    <div className="seach-container">
+                        <Form.Control size="sm" type="text" placeholder="Search" />
+                    </div>
                 </div>
                 <div className="user-name">
                     <p>Melquisedeque</p>
@@ -24,7 +31,7 @@ function Dashboard() {
                 </div>
                 <div className="container-content">
                     <div className="btn-container-create">
-                        <BtnPrimarySave />
+                        <BtnModalCreate />
                     </div>
                     <div className="content-description">
                         <p>Description</p>
