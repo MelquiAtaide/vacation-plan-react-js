@@ -1,0 +1,74 @@
+.container-dashboard{
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #F8F7FF;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    margin: 1%;
+    border-radius: 12px;
+    width: 98%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header p {
+    margin-inline: 10px;
+    color: #ffffff;
+    font-weight: 600;
+}
+h1{
+    margin-inline: 10px;
+    color: #ffffff;
+}
+.items{
+    margin-right: 10px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #2C15B0;
+}
+.user-name{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #2C15B0;
+}
+
+/* style content  */
+
+.container{
+    margin: 1%;
+    margin-top: 7%;
+    border-radius: 12px;
+    width: 98%;
+    display: flex;
+    flex-direction: row;
+}
+.container-table{
+    margin-right: 10px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.container-content{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
