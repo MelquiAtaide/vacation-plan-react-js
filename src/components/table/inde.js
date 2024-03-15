@@ -1,10 +1,30 @@
 import React from "react";
+import { useState, useEffect } from 'react';
+// Style
 import './tableContent.css';
+// Libraries
+import axios from 'axios';
+import { format } from 'date-fns';
 
 import { Button, Table } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import BtnModalEdit from "../button/btnModalEdit";
 
 function TableContent() {
+    const [events, setEvents] = useState([]);
+
+    useEffect(() => {
+        fetchEvents();
+    }, []);
+
+    const fetchEvents = async () => {
+        try {
+            const response = await axios.get("http://127.0.0.1:8000/api/event");
+            setEvents(response.data);
+        } catch (error) {
+            console.error("Error fetching events:", error);
+        }
+    };
     return (
         <div className="home">
             <Table className="table table-borderless" striped bordered hover >
@@ -19,58 +39,21 @@ function TableContent() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Praia</td>
-                        <td>Praia de Patacho</td>
-                        <td>16/03/2024</td>
-                        <td>Patacho-Porto de Pedras/AL</td>
-                        <td>Melquisedeque</td>
-                        <td>
-                            <div>
-                                <Button as="a" variant="primary">Edit</Button>
-                                <Button as="a" variant="danger" className="btn-options">Delete</Button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Cinema</td>
-                        <td>Kinoplex</td>
-                        <td>15/03/2024</td>
-                        <td>Mcz shopping-Jatiúca-Maceió/AL</td>
-                        <td>Melquisedeque</td>
-                        <td>
-                            <div>
-                                <Button as="a" variant="primary">Edit</Button>
-                                <Button as="a" variant="danger" className="btn-options">Delete</Button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Cinema</td>
-                        <td>Kinoplex</td>
-                        <td>15/03/2024</td>
-                        <td>Mcz shopping-Jatiúca-Maceió/AL</td>
-                        <td>Melquisedeque</td>
-                        <td>
-                            <div>
-                                <Button as="a" variant="primary">Edit</Button>
-                                <Button as="a" variant="danger" className="btn-options">Delete</Button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Cinema</td>
-                        <td>Kinoplex</td>
-                        <td>15/03/2024</td>
-                        <td>Mcz shopping-Jatiúca-Maceió/AL</td>
-                        <td>Melquisedeque</td>
-                        <td>
-                            <div>
-                                <Button as="a" variant="primary">Edit</Button>
-                                <Button as="a" variant="danger" className="btn-options">Delete</Button>
-                            </div>
-                        </td>
-                    </tr>
+                    {events.map(event => (
+                        <tr>
+                            <td>{event.title}</td>
+                            <td>{event.description}</td>
+                            <td>{format(new Date(event.date), 'dd/MM/yyyy')}</td>
+                            <td>{event.location}</td>
+                            <td>{event.participant}</td>
+                            <td>
+                                <div>
+                                    <BtnModalEdit eventId={event.id} />
+                                    <Button as="a" variant="danger" className="btn-options">Delete</Button>
+                                </div>
+                            </td>
+                        </tr>
+                    ))}
                 </tbody>
             </Table>
         </div>

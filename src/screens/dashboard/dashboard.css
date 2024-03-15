@@ -5,13 +5,11 @@
 .container-dashboard{
     height: 100vh;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
     background-color: #F8F7FF;
 }
 
 header {
-    position: fixed;
-    right: 0;
     margin: 1%;
     border-radius: 12px;
     width: 98%;
@@ -52,8 +50,8 @@ h1{
     align-items: center;
     justify-content: space-between;
 }
-.seach-container{
-    width: 40%;
+.create-container{
+    width: 15%;
     margin-right: 10px;
 }
 .user-name{
@@ -74,19 +72,20 @@ h1{
 
 .container-main{
     margin: 1%;
-    margin-top: 7%;
+    margin-top: 0;
     border-radius: 12px;
     width: 98%;
     display: flex;
     flex-direction: row;
 }
 
-.container-table{
+.container-card{
     margin-right: 10px;
     width: 80%;
-    height: 100%;
+    max-height: 80vh;
     display: flex;
     align-items: center;
+    overflow-y: auto;
     border-radius: 12px;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -111,4 +110,19 @@ h1{
 .content-description{
     width: 90%;
     margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .user-name{
+        display: none;
+    }
+    .title-app{
+        width: 100%;
+    }
+    .container-content{
+        display: none;
+    }
+    .container-card{
+        width: 100%;
+    }
 }
