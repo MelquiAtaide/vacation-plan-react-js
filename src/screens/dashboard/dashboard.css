@@ -40,6 +40,22 @@ h1{
     border-radius: 12px;
     background-color: #0475B9;
 }
+.icons-bar-container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;   
+}
+.icon-pdf{
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #ffffff;
+}
+.icon-menu-form {
+    display: none;
+    color: #ffffff;
+    cursor: pointer;
+}
 .logo-photo{
     margin-left: 5px;
     width: 60px;
@@ -82,17 +98,20 @@ h1{
 .container-card{
     margin-right: 10px;
     width: 80%;
-    max-height: 80vh;
+    max-height: 85vh;
+    overflow-y: auto;
     display: flex;
     align-items: center;
-    overflow-y: auto;
     border-radius: 12px;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
-.container-content{
+.container-form-create{
     width: 20%;
     height: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -100,6 +119,12 @@ h1{
     border-radius: 12px;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.container-form-create h5{
+    margin: 10px;
+    font-weight: 600;
+    font-family: inter;
+    color: #0475B9;
 }
 
 .btn-container-create{
@@ -111,6 +136,19 @@ h1{
     width: 90%;
     margin: 10px;
 }
+@media only screen and (max-width: 1024px) {
+    .user-name p{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .user-name p{
+        font-size: 10px;
+    }
+    .user-photo{
+        width: 30px;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     .user-name{
@@ -119,10 +157,32 @@ h1{
     .title-app{
         width: 100%;
     }
-    .container-content{
+    .container-form-create{
         display: none;
     }
     .container-card{
         width: 100%;
+    }
+    .title-app svg {
+        display: block;
+    }
+    .user-name p{
+        font-size: 14px;
+    }
+    .user-photo{
+        width: 50px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    h1{
+        font-family: inter;
+        margin: 10px;
+        font-size: 20px !important;
+        color: #ffffff !important;
+    }
+    .logo-photo{
+        margin-left: 5px;
+        width: 40px;
+        border-radius: 20px;
     }
 }

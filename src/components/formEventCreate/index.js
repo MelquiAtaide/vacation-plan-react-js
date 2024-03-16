@@ -59,10 +59,10 @@ function FormEventCreate() {
 
   return (
     <>
-      {error && <Alert variant="danger">{error}</Alert>}
+      {error && <Alert className="alert-error-form" variant="danger">{error}</Alert>}
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="title">
-          <Form.Label>Title</Form.Label>
+          <Form.Label>Title*</Form.Label>
           <Form.Control
             type="text"
             value={title}
@@ -75,7 +75,7 @@ function FormEventCreate() {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mb-3" controlId="description">
-          <Form.Label>Description</Form.Label>
+          <Form.Label>Description*</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
@@ -89,7 +89,7 @@ function FormEventCreate() {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mb-3" controlId="date">
-          <Form.Label>Date</Form.Label>
+          <Form.Label>Date*</Form.Label>
           <Form.Control
             type="date"
             value={date}
@@ -102,7 +102,7 @@ function FormEventCreate() {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="mb-3" controlId="location">
-          <Form.Label>Location</Form.Label>
+          <Form.Label>Location*</Form.Label>
           <Form.Control
             type="text"
             value={location}

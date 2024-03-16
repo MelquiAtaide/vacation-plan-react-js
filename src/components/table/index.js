@@ -6,9 +6,8 @@ import './tableContent.css';
 import axios from 'axios';
 import { format } from 'date-fns';
 
-import { Button, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BtnModalEdit from "../button/btnModalEdit";
 
 function TableContent() {
     const [events, setEvents] = useState([]);
@@ -35,7 +34,6 @@ function TableContent() {
                         <th>Date</th>
                         <th>Location</th>
                         <th>Participant</th>
-                        <th>Options</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,12 +44,6 @@ function TableContent() {
                             <td>{format(new Date(event.date), 'dd/MM/yyyy')}</td>
                             <td>{event.location}</td>
                             <td>{event.participant}</td>
-                            <td>
-                                <div>
-                                    <BtnModalEdit eventId={event.id} />
-                                    <Button as="a" variant="danger" className="btn-options">Delete</Button>
-                                </div>
-                            </td>
                         </tr>
                     ))}
                 </tbody>

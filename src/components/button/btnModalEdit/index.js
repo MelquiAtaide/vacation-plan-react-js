@@ -48,9 +48,9 @@ function BtnModalEdit({ eventId }) {
       window.location.reload();
     } catch (error) {
       if (error.response) {
-        setError(error.response.data.message || "Ocorreu um erro ao processar a requisição.!");
+        setError(error.response.data.message || "An error occurred while processing the requisition.!");
       } else {
-        setError("Ocorreu um erro ao processar a requisição.");
+        setError("An error occurred while processing the requisition.");
       }
     }
   };
@@ -58,7 +58,7 @@ function BtnModalEdit({ eventId }) {
   return (
     <>
       <button className="btn-primary-edit" onClick={handleShow}>
-        <FaEdit size={25} />
+        <FaEdit size={25} className="btn-primary-edit" onClick={handleShow} />
       </button>
 
       <Modal className="modal-edit" show={show} onHide={handleClose}>
