@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/vacation-plan-react-js/static/css/main.c11d15c3.css",
+    "main.js": "/vacation-plan-react-js/static/js/main.7f03b9c1.js",
+    "static/js/453.12090b44.chunk.js": "/vacation-plan-react-js/static/js/453.12090b44.chunk.js",
+    "static/media/user_2.png": "/vacation-plan-react-js/static/media/user_2.be756e48e932f4590a2e.png",
+    "static/media/Inter-VariableFont_slnt,wght.ttf": "/vacation-plan-react-js/static/media/Inter-VariableFont_slnt,wght.853e01975d2783d9fa29.ttf",
+    "static/media/logo.png": "/vacation-plan-react-js/static/media/logo.2e9d92e59e8e95c83816.png",
+    "index.html": "/vacation-plan-react-js/index.html",
+    "main.c11d15c3.css.map": "/vacation-plan-react-js/static/css/main.c11d15c3.css.map",
+    "main.7f03b9c1.js.map": "/vacation-plan-react-js/static/js/main.7f03b9c1.js.map",
+    "453.12090b44.chunk.js.map": "/vacation-plan-react-js/static/js/453.12090b44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c11d15c3.css",
+    "static/js/main.7f03b9c1.js"
+  ]
+}
